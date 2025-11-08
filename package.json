@@ -1,0 +1,13 @@
+{
+  "name": "ipv6-campus-networking",
+  "version": "1.0.0",
+  "description": "IPv6-based Addressing System for Smart Campus Networking",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server",
+    "dev": "live-server"
+  },
+  "keywords": ["ipv6", "campus", "networking", "addressing"],
+  "author": "Your Name",
+  "license": "MIT"
+}
