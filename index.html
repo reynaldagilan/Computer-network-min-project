@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPv6 Smart Campus Addressing System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>IPv6 Smart Campus Networking</h1>
+            <p class="subtitle">Intelligent Addressing System for Connected Campus Infrastructure</p>
+        </header>
+        
+        <main>
+            <section class="dashboard">
+                <div class="control-panel">
+                    <h2>Address Configuration</h2>
+                    
+                    <div class="input-group">
+                        <label for="campus-id">Campus ID:</label>
+                        <input type="text" id="campus-id" placeholder="e.g., CAMPUS-001" value="CAMPUS-001">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="subnet">Subnet Prefix:</label>
+                        <input type="text" id="subnet" placeholder="e.g., 2001:db8::/32" value="2001:db8::/32">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="device-type">Device Type:</label>
+                        <select id="device-type">
+                            <option value="router">Router</option>
+                            <option value="access-point">Access Point</option>
+                            <option value="sensor">IoT Sensor</option>
+                            <option value="gateway">Gateway</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="device-name">Device Name:</label>
+                        <input type="text" id="device-name" placeholder="e.g., Building-A-Router">
+                    </div>
+                    
+                    <button id="generate-btn" class="btn btn-primary">Generate IPv6 Address</button>
+                    <button id="validate-btn" class="btn btn-secondary">Validate Address</button>
+                </div>
+                
+                <div class="results-panel">
+                    <h2>Generated Address</h2>
+                    <div class="result-box">
+                        <div class="result-item">
+                            <span class="label">Full IPv6:</span>
+                            <span class="value" id="ipv6-full">Not generated yet</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="label">Compressed:</span>
+                            <span class="value" id="ipv6-compressed">-</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="label">Status:</span>
+                            <span class="value" id="address-status">-</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="network-info">
+                <h2>Campus Network Information</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Network Statistics</h3>
+                        <ul>
+                            <li>Total Devices: <span id="device-count">0</span></li>
+                            <li>Active Connections: <span id="active-count">0</span></li>
+                            <li>Network Status: <span id="network-status">Operational</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>IPv6 Configuration</h3>
+                        <ul>
+                            <li>Protocol Version: IPv6</li>
+                            <li>Address Space: 128-bit</li>
+                            <li>Scheme: EUI-64</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>Campus Buildings</h3>
+                        <ul id="buildings-list">
+                            <li>Building A (Admin)</li>
+                            <li>Building B (Labs)</li>
+                            <li>Building C (Dormitory)</li>
+                            <li>Building D (Library)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="device-list">
+                <h2>Registered Devices</h2>
+                <div class="table-container">
+                    <table id="devices-table">
+                        <thead>
+                            <tr>
+                                <th>Device Name</th>
+                                <th>IPv6 Address</th>
+                                <th>Type</th>
+                                <th>Status</th>
+                                <th>Building</th>
+                            </tr>
+                        </thead>
+                        <tbody id="devices-tbody">
+                            <tr>
+                                <td>Main-Router-A</td>
+                                <td>2001:db8:1::1</td>
+                                <td>Router</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>Building A</td>
+                            </tr>
+                            <tr>
+                                <td>Lab-AP-B1</td>
+                                <td>2001:db8:2::101</td>
+                                <td>Access Point</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>Building B</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 IPv6 Smart Campus Networking System | Computer Networks Mini Project</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
